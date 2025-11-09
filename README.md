@@ -7,7 +7,7 @@ Project for CSC2503
 1. vqgan_transformer_wasserstein.py: VQGAN+GPT **with** wasserstein tokenization
 2. vqgan_transformer.py: VQGAN+GPT **without** wasserstein tokenization
 
-## Training pipline
+## Training pipline(Training without wasserstein tokenization as an example, same for vqgan_transformer_wasserstein.py)
 
 ### VQ-GAN Training
 
