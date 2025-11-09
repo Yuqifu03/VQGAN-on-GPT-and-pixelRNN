@@ -2,9 +2,9 @@
 
 Project for CSC2503
 
-### Training pipline
+## Training pipline
 
-## VQ-GAN Training
+### VQ-GAN Training
 
 Train the VQ-GAN model:
 
@@ -14,7 +14,7 @@ python vqgan_transformer_fashionmnist.py --stage vqgan --epochs 10 --out_dir run
 
 This saves checkpoints under `runs/` and logs sample reconstructions.
 
-## Encode the Dataset to Tokens
+### Encode the Dataset to Tokens
 
 Encode the dataset using the trained VQ-GAN:
 
@@ -23,7 +23,7 @@ python vqgan_transformer_fashionmnist.py --stage encode \
   --ckpt_vqgan runs/vqgan_final.pt --out_dir runs
 ```
 
-## Train the Transformer (GPT) on Tokens
+### Train the Transformer (GPT) on Tokens
 
 Train the GPT model on the encoded tokens:
 
@@ -32,7 +32,7 @@ python vqgan_transformer_fashionmnist.py --stage gpt \
   --train_codes runs/train_codes.pt --epochs 10 --out_dir runs
 ```
 
-## Generate Samples
+### Generate Samples
 
 Generate new samples using both models:
 
