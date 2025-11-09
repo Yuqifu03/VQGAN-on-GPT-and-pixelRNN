@@ -1,6 +1,8 @@
 # VQGAN-on-GPT
 
-Project for CSC2503
+Project for CSC2503.
+
+We train a VQGAN+GPT model on the Fashion-MNIST dataset and compare it with a version that uses a Wasserstein quantizer. We find that the Wasserstein quantizer helps prevent codebook collapse and produces more diverse and higher-quality images. For example, when applied to the “shoe” category, the model with the Wasserstein quantizer generates visually distinct and detailed samples compared to the standard version.
 
 ## File introduction
 
