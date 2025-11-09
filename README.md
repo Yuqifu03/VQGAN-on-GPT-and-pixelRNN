@@ -6,7 +6,6 @@ Project for CSC2503
 
 1. vqgan_transformer_wasserstein.py: VQGAN+GPT **with** wasserstein tokenization
 2. vqgan_transformer.py: VQGAN+GPT **without** wasserstein tokenization
-3. vqvae_transformer.py: VQVAE+GPT **without** wasserstein tokenization
 
 ## Training pipline
 
@@ -19,6 +18,15 @@ python vqgan_transformer_fashionmnist.py --stage vqgan --epochs 10 --out_dir run
 ```
 
 This saves checkpoints under `runs/` and logs sample reconstructions.
+
+### Train VQ-VAE (no GAN)
+python vqgan_transformer_fashionmnist.py \
+    --stage vqgan \
+    --epochs 10 \
+    --no_gan \
+    --out_dir runs \
+    --device cuda
+
 
 ### Encode the Dataset to Tokens
 
