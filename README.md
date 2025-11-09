@@ -2,6 +2,8 @@
 
 Project for CSC2503
 
+### Training pipline
+
 ## VQ-GAN Training
 
 Train the VQ-GAN model:
