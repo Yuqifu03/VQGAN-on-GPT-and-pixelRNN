@@ -63,7 +63,8 @@ python vqgan_transformer_fashionmnist.py \
 Generate new samples using both models:
 
 ```bash
-python vqgan_transformer_fashionmnist.py --stage sample \
+python vqgan_transformer_fashionmnist.py \
+  --stage sample \
   --ckpt_vqgan runs/vqgan_final.pt \
   --ckpt_gpt runs/gpt_final.pt \
   --train_codes runs/train_codes.pt \
