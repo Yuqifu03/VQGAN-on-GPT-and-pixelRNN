@@ -20,12 +20,15 @@ python vqgan_transformer_fashionmnist.py --stage vqgan --epochs 10 --out_dir run
 This saves checkpoints under `runs/` and logs sample reconstructions.
 
 ### Train VQ-VAE (no GAN)
+
+```bash
 python vqgan_transformer_fashionmnist.py \
     --stage vqgan \
     --epochs 10 \
     --no_gan \
     --out_dir runs \
     --device cuda
+```
 
 
 ### Encode the Dataset to Tokens
