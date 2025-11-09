@@ -458,9 +458,8 @@ def encode_stage(args):
         use_gan=False,
     ).to(device)
     assert args.ckpt_vqgan and Path(args.ckpt_vqgan).exists(), "Provide trained VQ-GAN checkpoint via --ckpt_vqgan"
-    model.load_state_dict(torch.load(args.ckpt_vqgan, map_location=device))
-    # state = torch.load(args.ckpt_vqgan, map_location=device)
-    # model.load_state_dict(state, strict=False)
+    state = torch.load(args.ckpt_vqgan, map_location=device)
+    model.load_state_dict(state, strict=False)
 
     model.eval()
 
@@ -525,9 +524,8 @@ def sample_stage(args):
         use_gan=False,
     ).to(device)
     assert args.ckpt_vqgan and Path(args.ckpt_vqgan).exists()
-    vq.load_state_dict(torch.load(args.ckpt_vqgan, map_location=device))
-    # state = torch.load(args.ckpt_vqgan, map_location=device)
-    # vq.load_state_dict(state, strict=False)
+    state = torch.load(args.ckpt_vqgan, map_location=device)
+    vq.load_state_dict(state, strict=False)
     vq.eval()
 
     # load meta for latent grid size
